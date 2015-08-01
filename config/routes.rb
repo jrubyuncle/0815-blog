@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  resources :articles, only: [:show]
+
   namespace :backend do
     get '/', to: 'dashboard#index'
     resources :articles
