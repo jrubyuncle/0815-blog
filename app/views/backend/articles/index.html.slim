@@ -15,14 +15,11 @@
           | Content
         th
         th
-        th
     tbody
       - @backend_articles.each do | backend_article |
         tr
           td
             = backend_article.title
-          td
-            = backend_article.content
           td
             = link_to 'Show', backend_article
           td

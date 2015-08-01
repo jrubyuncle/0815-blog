@@ -28,6 +28,14 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem "slim-rails"
 
 gem 'bootstrap-generators', '~> 3.3.4'
+
+gem 'ckeditor'
+
+gem 'carrierwave'
+
+gem 'mini_magick'
+
+gem 'responders'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
