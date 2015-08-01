@@ -1,0 +1,31 @@
+.page-header
+  = link_to new_backend_article_path, class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-plus
+    |  New Article
+  h1
+    | Listing backend_articles
+
+.table-responsive
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th
+          | Title
+        th
+          | Content
+        th
+        th
+        th
+    tbody
+      - @backend_articles.each do | backend_article |
+        tr
+          td
+            = backend_article.title
+          td
+            = backend_article.content
+          td
+            = link_to 'Show', backend_article
+          td
+            = link_to 'Edit', edit_backend_article_path(backend_article) 
+          td
+            = link_to 'Destroy', backend_article, method: :delete, data: { confirm: 'Are you sure?' } 

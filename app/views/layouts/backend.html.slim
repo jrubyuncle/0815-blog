@@ -28,8 +28,7 @@ html
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
             li.active
-              a href="#"
-                | Articles
+              = link_to "Articles", backend_articles_path
     .container
       - flash.each do |name, msg|
         = content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do

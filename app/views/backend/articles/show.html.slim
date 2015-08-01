@@ -1,0 +1,18 @@
+.page-header
+  = link_to backend_articles_path, class: 'btn btn-default' do 
+    span.glyphicon.glyphicon-list-alt
+    |  Back 
+  = link_to edit_backend_article_path(@backend_article), class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-pencil
+    |  Edit 
+  h1
+    | Show backend_article
+dl.dl-horizontal
+  dt
+    | Title:
+  dd
+    = @backend_article.title
+  dt
+    | Content:
+  dd
+    = @backend_article.content
